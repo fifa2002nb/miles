@@ -1,0 +1,31 @@
+[ 2015-08-18T11:16:31+08:00 ] 10.0.2.2 /
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name /opt/nginx/www/miles/server/ThinkPHP/Lib/Core/App.class.php 第 56 行.
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name /opt/nginx/www/miles/server/ThinkPHP/Lib/Core/App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.003658s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.004516s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008270s ]
+NOTIC: [2048] Declaration of IndexAction::index() should be compatible with CommonAction::index($return = false, $returnIncludeCount = true) /opt/nginx/www/miles/server/Lib/Action/HOME/IndexAction.class.php 第 3 行.
+NOTIC: [8] Undefined index: installing /opt/nginx/www/miles/server/Lib/Action/CommonAction.class.php 第 35 行.
+
+[ 2015-08-18T11:16:34+08:00 ] 10.0.2.2 /index.php?s=/install
+INFO: [ path_info ] --START--
+INFO: CheckUrlExt Behavior ::run [ RunTime:0.012319s ]
+INFO: [ path_info ] --END-- [ RunTime:0.012449s ]
+NOTIC: [8] Constant __EXT__ already defined /opt/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 100 行.
+INFO: [ route_check ] --START--
+INFO: CheckRestRoute Behavior ::run [ RunTime:0.009771s ]
+INFO: [ route_check ] --END-- [ RunTime:0.009909s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead /opt/nginx/www/miles/server/ThinkPHP/Lib/Core/Dispatcher.class.php 第 137 行.
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name /opt/nginx/www/miles/server/ThinkPHP/Lib/Core/App.class.php 第 56 行.
+NOTIC: [2] array_walk_recursive() expects parameter 2 to be a valid callback, function 'filter_exp' not found or invalid function name /opt/nginx/www/miles/server/ThinkPHP/Lib/Core/App.class.php 第 57 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.004616s ]
+INFO: CheckLang Behavior ::run [ RunTime:0.005194s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009933s ]
+NOTIC: [8] Undefined offset: 1 /opt/nginx/www/miles/server/ThinkPHP/Common/common.php 第 500 行.
+NOTIC: [2048] Declaration of InstallAction::index() should be compatible with CommonAction::index($return = false, $returnIncludeCount = true) /opt/nginx/www/miles/apps/install/backend/InstallAction.class.php 第 9 行.
+
+[ 2015-08-18T11:16:34+08:00 ] 10.0.2.2 /index.php?s=/install
+NOTIC: [8] Undefined variable: code /opt/nginx/www/miles/server/ThinkPHP/Extend/Action/RestAction.class.php 第 305 行.
+

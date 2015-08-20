@@ -1,0 +1,34 @@
+# deploy mysql container
+# build docker container from dockerfile
+docker build -t fifa2002nb/mysql ./mysql
+
+# run mysql container, boot2docker 's db_path("/home/docker/opt/data/mysql") is specified
+docker run -p 3306:3306 -v /home/docker/opt/data/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -it fifa2002nb/mysql
+
+# mapping mac_port:boot2docker_port:docker:port
+VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port_3306:3306,tcp,,3306,,3306"
+
+# deploy nginx container
+# build docker containter from dockerfile
+docker build -t fifa2002nb/nginx ./nginx
+
+# run nginx container, mapping mac dir "~/opt" to docker container's dir "/opt"; NOTICE : nginx.conf configures the upstream's addr:"fastcgi://miles_php"
+docker run -p 80:80 -p 8080:8080 -p 8081:8081 -v ~/opt:/opt --link php:php -it fifa2002nb/nginx
+
+# mapping mac_port:boot2docker_port:docker:port
+VBoxManage modifyvm "boot2docker-vm" --natpf1 "tcp-port_80:80,tcp,,80,,80"
+
+# deploy php-fpm contianer
+# build docker container from dockerfile
+docker build -t fifa2002nb/php ./php
+
+# run php-fpm container, mapping mac dir "~/opt" to docker container's dir "/opt"
+docker run -p 9000:9000 -v ~/opt:/opt --name php -it fifa2002nb/php
+
+# deploy docker-compose
+pip install -U docker-compose
+
+# make docker-compose.yml
+
+# run docker-compose
+docker-compose up
